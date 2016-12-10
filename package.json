@@ -1,17 +1,20 @@
 {
   "name": "phew-backup",
-  "version": "1.0.0",
-  "description": "",
-  "main": "lib/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "0.10.0",
+  "description": "Backup script for dotfiles, homebrew packages, and globally installed npm modules.",
+  "main": "index.js",
+  "bin": {
+    "phew": "./index.js"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "del": "^2.2.2",
     "gulp-util": "^3.0.7",
     "gutil": "^1.6.4",
     "inquirer": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
