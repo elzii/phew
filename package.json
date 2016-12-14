@@ -15,6 +15,9 @@
     "inquirer": "^2.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "xo"
+  },
+  "devDependencies": {
+    "xo": "^0.17.1"
   }
 }
