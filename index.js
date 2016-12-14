@@ -162,7 +162,10 @@ var files = {
       {
         dir: '.config/rtv',
         excludes: ['history']
-      }
+      },
+      // {
+      //   dir: 'Library/Application\ Support/Sublime\ Text 3/Packages/User/Preferences.sublime-settings'
+      // }
     ]
   },
 
@@ -311,8 +314,10 @@ function buildRsyncCmd(item) {
 
   cmd += 'rsync -av ';
 
+  // console.log(item.dir.indexOf('.config/'))
+
   // Check if dir to backup is at base or in XDG
-  if (item.dir.split('/').length > 1) {
+  if (item.dir.indexOf('.config/') !== -1 ) {
     cmd += path.join(HOME, item.dir) + ' ' + OUTPUT_DIR + item.dir.split('/')[0];
   } else {
     cmd += path.join(HOME, item.dir) + ' ' + OUTPUT_DIR;
